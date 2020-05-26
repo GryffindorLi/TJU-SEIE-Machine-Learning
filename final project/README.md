@@ -40,9 +40,9 @@ python main.py [--task] [--prekernel] [--preplot] [--preprocessing] [--cls_metho
     parser.add_argument('--M', default=1.5, type=float, help='M parameter in FCM')
     parser.add_argument('--Error', default=0.005, type=float, help='error threshold in FCM')
 ```
-
-
-
-## TODO:
-
-完善README.md
+具体命令行可如下列所示：
+```
+python main.py --cls_method=NN --preprocessing=KPCA --lr=0.000001  #神经网络，数据预处理为KPCA
+python main.py --task=cluster --preprocessing=KPCA --prekernel=sigmoid  #聚类，数据预处理为KPCA，KPCA使用sigmoid核函数
+python main.py --task=prep --preplot=True  #数据预处理，预处理结果用画图进行展示
+```
